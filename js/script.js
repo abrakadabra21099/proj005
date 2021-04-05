@@ -1,33 +1,37 @@
 "use strict";
 
-const arr = [1, 2, 3, 6, 8];
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
 
-// console.log(arr.pop());
-// console.log(arr);
-// arr.push(10);
-// console.log(arr);
+console.log(typeof(5 + ''));
 
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
+const num = 6;
 
-// for (let v of arr) {
-//     console.log(v);
-// }
+console.log('https://vk..com/catalog/' + num);
 
-// arr[99] = 0;
-// console.log(arr.length)
-// console.log(arr);
+const fontSize = 26 + 'px';
 
-arr.forEach(function(val, index, arr) {
-    console.log(`${index}: ${val} внутри массива ${arr}`);
-});
+// toNumber
+console.log(typeof(Number('4')));
+console.log(typeof(+'4'));
+console.log(typeof( parseInt(fontSize, 10) ));
 
-const str = prompt('','');
-const products = str.split(',');
-products.sort(compareNum);
-console.log(products.join(' | '));
+console.log( parseInt(fontSize, 10) );
 
-function compareNum(a, b) {
-    return a - b;
+let answer = +prompt('Hello', '');
+console.log(typeof( parseInt(answer) ));
+
+// toBoolean
+// 0, '', null, undefined, NaN;
+// 1)
+let sw = null;
+sw  = 1;
+if (sw) {
+    console.log('Working...')
 }
+
+// 2)
+console.log(typeof(Boolean('4')));
+
+// 3)
+console.log(typeof(!!'4'));
