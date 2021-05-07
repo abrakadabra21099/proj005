@@ -35,3 +35,22 @@ console.log(typeof(Boolean('4')));
 
 // 3)
 console.log(typeof(!!'4'));
+
+const summa = {
+    a: 10,
+    b: 15,
+    get summa() {
+        return this.a + this.b;
+    },
+    get prA() {
+        return this.a;
+    },
+    set prA(newA) {
+        this.a = newA;
+    },
+
+};
+
+console.log(summa.summa);
+summa.prA = 20;
+console.log(summa.summa);
